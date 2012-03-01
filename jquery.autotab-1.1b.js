@@ -12,6 +12,9 @@
  */
 
 (function($) {
+
+	var $focused = 0;
+
 // Look for an element based on ID or name
 var check_element = function(name) {
 	var obj = null;
@@ -213,11 +216,15 @@ $.fn.autotab = function(options) {
 	if(defaults.format != 'all')
 		$(this).autotab_filter(defaults);
 
+
+	$(this).focusin(function() {$focused += 1;});
+
 	// Go to the previous element when backspace
 	// is pressed in an empty input field
 	return $(this).bind('keydown', function(e) {
 		if(e.which == 8 && this.value.length == 0 && defaults.previous)
 			defaults.previous.focus().val(defaults.previous.val());
+
 	}).bind('keyup', function(e) {
 		/**
 		 * Do not auto tab when the following keys are pressed
@@ -248,10 +255,16 @@ $.fn.autotab = function(options) {
 		{
 			var val = $(this).val();
 
-			if($.inArray(e.which, keys) == -1 && val.length == defaults.maxlength && defaults.target)
-				defaults.target.focus();
+			if($.inArray(e.which, keys) == -1 && $focused == 0 && val.length == defaults.maxlength && defaults.target){
+				defaults.target.focus().select();
+				$focused += 1;
+			} else {
+				$focused = 0;
+			}
 		}
 	});
+	
+
 };
 
 })(jQuery);
