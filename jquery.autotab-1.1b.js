@@ -216,7 +216,7 @@ $.fn.autotab = function(options) {
 	if(defaults.format != 'all')
 		$(this).autotab_filter(defaults);
 
-
+	$(this).click(function() {$focused = 0;});
 	$(this).focusin(function() {$focused += 1;});
 
 	// Go to the previous element when backspace
@@ -251,6 +251,8 @@ $.fn.autotab = function(options) {
 		 */
 		var keys = [8, 9, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 45, 46, 144, 145];
 
+
+		console.log($focused);
 		if(e.which != 8)
 		{
 			var val = $(this).val();
