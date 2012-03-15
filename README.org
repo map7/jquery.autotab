@@ -1,0 +1,16 @@
+* jQuery.autotab
+
+Autotab - jQuery plugin 1.1b
+http://www.lousyllama.com/sandbox/jquery-autotab
+
+Copyright (c) 2008 Matthew Miller
+
+This is the jquery.autotab with my alterations.
+
+** Installation
+
+Copy the js file into your app/assets/javascript directory of your rails app.
+
+** Usage
+
+   Refer: http://www.lousyllama.com/sandbox/jquery-autotab
