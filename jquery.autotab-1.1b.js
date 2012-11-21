@@ -62,6 +62,24 @@ $.fn.autotab_magic = function(focus) {
 };
 
 /**
+ * autotab_remove automatically removes autotabbing with the
+ * next and previous elements as provided by :input.
+ * 
+ * autotab_remove should called before applying filters, if used.
+ * 
+ * @name    autotab_remove
+ * @param   none   
+ * @example $(':input').autotab_remove();
+ */
+$.fn.autotab_remove = function() {
+    for(var i = 0; i < this.length; i++)
+    {
+        $(this[i]).off();
+    }
+    return this;
+};
+
+/**
  * This will take any of the text that is typed and
  * format it according to the options specified.
  * 
