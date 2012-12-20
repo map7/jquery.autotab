@@ -1,0 +1,22 @@
+{
+    "name"         : "jquery.autotab",
+    "version"      : "1.1.2",
+    "description"  : "Autotab is a jQuery plugin that provides auto-tabbing and filtering on text fields in a form.",
+    "main"         : [ "./jquery.autotab-1.1b.js" ],
+    "homepage"     : "http://www.lousyllama.com/sandbox/jquery-autotab",
+    "dependencies" : {
+        "jquery" : ">= 1.5.x"
+    },
+    "keywords"     : [
+        "autotab",
+        "tab"
+    ],
+    "author" : {
+        "name" : "Matthew Miller",
+        "web"  : "http://www.lousyllama.com"
+    },
+    "license": [
+        "http://www.opensource.org/licenses/mit-license.php",
+        "http://www.gnu.org/licenses/gpl.html"
+    ]
+}

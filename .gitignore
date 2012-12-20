@@ -1,1 +1,3 @@
 *.patch
+.DS_Store
+*.sw*
