@@ -1,7 +1,9 @@
 * jQuery.autotab
 
+NOTE: This project is out of date, to get the latest please refer to https://github.com/Mathachew/jquery-autotab
+
 Autotab - jQuery plugin 1.1b
-http://www.lousyllama.com/sandbox/jquery-autotab
+
 
 Copyright (c) 2008 Matthew Miller
 
